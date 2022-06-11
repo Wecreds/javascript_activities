@@ -1,0 +1,32 @@
+<script>
+
+    const preco = Number(prompt(`Digite o preço do produto`))
+
+    // if (preco <= 280) {
+    //     document.write(`O preço base era ${preco}, aumentando o preço agora este produto custa R$${(preco + ((preco / 100) * 20)).toFixed(2)}, o percentual de aumento foi 20% de acordo com o preço base, o valor do aumento foi ${preco / 100 * 20}.`)
+    // } else {
+    //     if (preco <= 700) {
+    //         document.write(`O preço base era ${preco}, aumentando o preço agora este produto custa R$${(preco + ((preco / 100) * 15)).toFixed(2)}, o percentual de aumento foi 15% de acordo com o preço base, o valor do aumento foi ${preco / 100 * 15}.`)
+    //     } else {
+    //         if (preco <= 1500) {
+    //             document.write(`O preço base era ${preco}, aumentando o preço agora este produto custa R$${(preco + ((preco / 100) * 10)).toFixed(2)}, o percentual de aumento foi 10% de acordo com o preço base, o valor do aumento foi ${preco / 100 * 10}.`)
+    //         } else {
+
+    //             document.write(`O preço base era ${preco}, aumentando o preço agora este produto custa R$${(preco + ((preco / 100) * 5)).toFixed(2)}, o percentual de aumento foi 5% de acordo com o preço base, o valor do aumento foi ${preco / 100 * 5}.`)
+
+    //         }
+    //     }
+    // }
+
+    let aumento = 0
+    if (preco <= 280) aumento = 20
+    else if (preco <= 700) aumento = 15
+    else if (preco <= 1500) aumento = 10
+    else aumento = 5
+
+    const novoPreco = (preco * aumento) / 100
+
+    document.write(`O preço base era ${preco}, aumentando o preço agora este produto custa R$${(preco + ((preco / 100) * aumento)).toFixed(2)}, o percentual de aumento foi ${aumento}% de acordo com o preço base, o valor do aumento foi ${novoPreco}.`)
+
+
+</script>

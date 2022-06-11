@@ -1,0 +1,21 @@
+<script>
+    const L1 = Number(prompt(`Digite o primeiro lado do triangulo`))
+    const L2 = Number(prompt(`Digite o segundo lado do triangulo`))
+    const L3 = Number(prompt(`Digite o terceiro lado do triangulo`))
+
+    if ((L1 + L2) > L3 && (L2 + L3) > L1 && (L1 + L3) > L2) {
+        if ((L1 === L2) && (L1 === L3)) {
+            document.write(`O triangulo é equilátero`)
+        } else if ((((L1 === L3) && (L1 !== L2)) || ((L1 === L2) && (L1 !== L3)) || ((L2 === L3) && (L2 !== L1)))) {
+            document.write(`O triangulo é isóceles`)
+        } else {
+            if (((L1 !== L2) && (L1 !== L3)) || ((L2 !== L3) && (L2 !== L1)) || ((L3 !== L2) && (L3 !== L1))) {
+                document.write(`O triangulo é escaleno`)
+            }
+        }
+    } else {
+        document.write(`Os valores digitados não formam um triangulo`)
+    }
+
+
+</script>

@@ -1,0 +1,19 @@
+<script>
+
+    const notas = Number(prompt(`Digite a média`))
+
+    const aulas = Number(prompt(`Digite o número de aulas`))
+
+    const faltas = Number(prompt(`Digite quantas faltas o aluno tem`))
+
+    if (((faltas / aulas) * 100) <= 25) {
+        document.write(`O aluno foi reprovado por faltas(RF).`)
+    } else {
+        if (notas < 7) {
+            document.write(`O aluno está em recuperação(EF).`)
+        } else {
+            document.write(`O aluno passou(AP).`)
+        }
+    }
+
+</script>

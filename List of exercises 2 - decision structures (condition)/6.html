@@ -1,0 +1,17 @@
+<script>
+
+    const N1 = Number(prompt("Digite o primeiro número"))
+    const N2 = Number(prompt("Digite o segundo número"))
+    const N3 = Number(prompt("Digite o terceiro número"))
+
+    if ((N1 < N2) && (N1 < N3)) {
+        document.write(`O menor número é ${N1}`)
+    } else {
+        if ((N2 < N3) && (N2 < N1)) {
+            document.write(`O menor número é ${N2}`)
+        } else {
+            document.write(`O menor número é ${N3}`)
+        }
+    }
+
+</script>
