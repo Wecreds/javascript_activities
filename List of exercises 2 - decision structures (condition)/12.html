@@ -1,0 +1,17 @@
+<script>
+
+    const porte = prompt("digite o porte do seu cão(pequeno/medio/grande).")
+
+    const idade = parseInt(prompt("Digite quantos anos ele já viveu."))
+
+    let fator = 0
+
+    if (porte === "pequeno") fator = 5
+    else if (porte === "medio")  fator = 6
+    else fator = 7
+
+    if (fator > 7 || fator < 5)
+    document.write(`algo deu errado, digite seu porte exatamente como está entre parênteses.`)
+    else 
+    document.write(`Seu cão tem ${idade * fator} anos de idade.`)
+</script>

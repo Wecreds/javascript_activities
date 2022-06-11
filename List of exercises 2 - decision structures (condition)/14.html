@@ -1,0 +1,18 @@
+<script>
+
+const peso = Number(prompt("Digite seu peso em Kg(Ex.: 80)."))
+
+const altura = Number(prompt("Digite sua altura em metros(Ex.: 1.70)."))
+
+const imc = (peso / altura ** 2)
+
+let conceito = 0
+
+if (imc <= 18.5) conceito = "Subpeso" 
+else if (imc <= 25.0) conceito = "Normal" 
+else if (imc <= 30.0) conceito = "Sobrepeso" 
+else conceito = "Obeso"
+
+document.write(`Você está ${conceito}(IMC = ${imc.toFixed(2)}).`)
+
+</script>
