@@ -1,0 +1,55 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+    Observando os termos no plural a colocação do "e", da vírgula entre outros.
+    
+    Exemplo:
+    326 = 3 centenas, 2 dezenas e 6 unidades
+    12 = 1 dezena e 2 unidades
+    Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
+    */
+
+    //ENTRADA
+
+    let N = Number(prompt("Digite um número menor que 1000"))
+    const V = N
+    let cet 
+    let dez 
+    
+    let cetfator = ""
+    let dezfator = ""
+
+    //PROCESSAMENTO
+
+    if (N >= 200 && N < 1000){
+        cet = (Math.floor(N/100))*100;
+        cetfator = (`${Math.floor(N/100)} centenas, `);
+        N = N - cet
+        } else if (N <= 199 && N >= 100){
+        cet = (Math.floor(N/100))*100;
+        cetfator = (`${Math.floor(N/100)} centena, `);
+        N = N - cet
+        } 
+
+    if (N >= 20 && N < 1000) {
+        dez = (Math.floor(N/10))*10;
+        dezfator = (`${Math.floor(N/10)} dezenas e `)
+        N = N - dez
+    } else if (N <= 19 && N >= 10){
+        dez = (Math.floor(N/10))*10;
+        dezfator = (`${Math.floor(N/10)} dezena e `)
+        N = N - dez
+    }
+
+    if (N >= 2) {
+        N = (`${N} unidades.`)
+    } else {
+        N = (`${N} unidade.`)
+    }
+
+    //SAÍDA
+
+    document.write(`${V} = ${cetfator} ${dezfator} ${N} unidades.`)
+
+</script>
