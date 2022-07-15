@@ -9,33 +9,49 @@
 
     //ENTRADA
 
-    let ValorSaque = parseInt(prompt("Informe o valor do saque"))
+    let N = parseInt(prompt("Informe o valor do saque"))
+    let MensagemFinal = ""
 
     //PROCESSAMENTO
+    if (N >= 10 && N <= 600) {
+        const notasCem = Math.floor(N / 100)
+        if (N >= 100) N = N % 100
+        const notasCinquenta = Math.floor(N / 50)
+        if (N >= 50) N = N % 50
+        const notasDez = Math.floor(N / 10)
+        if (N >= 10) N = N % 10
+        const notasCinco = Math.floor(N / 5)
+        const notasUm = N % 5
+        if (notasCem > 0) MensagemFinal += `Notas de R$ 100,00 = ${notasCem}<br>`
+        if (notasCinquenta > 0) MensagemFinal += `Notas`
+    }
+    if (N >= 100 && N <= 600) {
+        MensagemFinal = `${(Math.floor(N/100))} Notas de R$100. <br>`
+        N = N - (Math.floor(N / 100) * 100)
+    }
 
-    if (ValorSaque / 100 >= 1){
-        const centesimo = Math.floor(ValorSaque/100)
-        let ValorSaque = ValorSaque
-    }
-    if (ValorSaque / 50 >= 1){
-        const quinquagesimo = Math.floor(ValorSaque/50)
-    }
-    if (ValorSaque / 10 >= 1){
-        const decimo = `R$${Math.floor(ValorSaque/10)} notas de 10`
-    }
-    if (ValorSaque / 5 >= 1){
-        const quinto = `R$${Math.floor(ValorSaque/5)} notas de 5`
+
+    if (N >= 50 && N <= 99) {
+        MensagemFinal = MensagemFinal + `${(Math.floor(N/50))} Notas de R$50. <br>`
+        N = N - (Math.floor(N / 50) * 50)
     }
 
+    if (N >= 10 && N <= 49) {
+        MensagemFinal = MensagemFinal + `${(Math.floor(N/5))} Notas de R$10. <br>`
+        N = N - (Math.floor(N / 10) * 10)
+    }
+
+    if (N >= 5 && N <= 9) {
+        MensagemFinal = MensagemFinal + `${(Math.floor(N/5))} Notas de R$5. <br>`
+        N = N - (Math.floor(N / 5) * 5)
+    }
+
+    if (N >= 0) {
+        MensagemFinal = MensagemFinal + `${N} Notas de R$1. <br>`
+    }
 
 
     //SAÍDA
 
-
-
-
-
-
-
-
+    document.write(MensagemFinal)
 </script>
