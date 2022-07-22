@@ -1,4 +1,6 @@
+<meta charset = "UTF-8">
 <script>
+    
     /*
     //PROBLEMA
     Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
@@ -7,11 +9,32 @@
 
     //ENTRADA
 
-
+    const hemisferio = prompt("Digite seu hemisfério:")
+    const mes = parseInt(prompt("Digite o número do mês em que você está:"))
     //PROCESSAMENTO
-
+    let estac = ""
     
-    //SAÍDA
+    if (hemisferio === "norte") {
+        if (mes <= 3) estac = 3
+        else if (mes <= 6) estac = 4
+        else if (mes <= 9) estac = 1
+        else estac = 2 
+    }
 
+    else if (hemisferio === "sul") {
+        if (mes <= 3) estac = 1
+        else if (mes <= 6) estac = 2
+        else if (mes <= 9) estac = 3
+        else estac = 4
+    }
+
+    if (estac === 1) estac = `Verão`
+    else if (estac === 2) estac = `Outono`
+    else if (estac === 3) estac = `Inverno`
+    else if (estac === 4) estac = `Primavera`
+    else if (estac === 5) estac = `Verão`
+
+    //SAÍDA
+    document.write(estac)
 
 </script>

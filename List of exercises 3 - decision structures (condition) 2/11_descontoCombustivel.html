@@ -1,3 +1,4 @@
+<meta charset = "UTF-8">
 <script>
     /*
     //PROBLEMA
@@ -5,7 +6,6 @@
     Álcool:
     - até 20 litros, desconto de 3% por litro
     - acima de 20 litros, desconto de 5% por litro
-
     Gasolina:
     - até 20 litros, desconto de 4% por litro
     - acima de 20 litros, desconto de 6% por litro
@@ -15,11 +15,26 @@
 
     //ENTRADA
 
+    const combustivel = prompt("Digite o tipo do combustível (A - Álcool, G - Gasolina)").toUpperCase()
+    const litros = parseInt(prompt("Digite a quantidade de litros de Combustível"))
 
     //PROCESSAMENTO
 
-    
+    const precoAlcool = 6.1
+    const precoGasolina = 6.5
+    let precofinal = 0
+
+    if (combustivel === "A") {
+
+        if(litros <= 20) precofinal = precoAlcool * 0.97 * litros
+        else precofinal = precoAlcool * 0.95 * litros
+    }   else if (combustivel === "G") {
+        if (litros <= 20) precofinal = precoGasolina * 0.96 * litros
+        else precofinal = precoGasolina * 0.94 * litros
+
+    }   else document.write(`Tipo de Combustível Inválido`)
+
     //SAÍDA
 
-
+    document.write (`O valor a ser pago é de R$${precofinal.toFixed(2)}`)
 </script>

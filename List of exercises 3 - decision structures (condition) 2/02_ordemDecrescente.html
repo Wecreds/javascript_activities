@@ -6,24 +6,22 @@
 
     //ENTRADA
 
-    const V1 = Number(prompt("Digite o primeiro número")) 
+    const V1 = Number(prompt("Digite o primeiro número"))
     const V2 = Number(prompt("Digite o segundo número"))
     const V3 = Number(prompt("Digite o terceiro número"))
     let fator
 
     //PROCESSAMENTO
 
-    if      ((V1 >= V2) && (V1 >= V3) && (V2 >= V3)) fator = `${V1}, ${V2} e ${V3}`
+    if ((V1 >= V2) && (V1 >= V3) && (V2 >= V3)) fator = `${V1}, ${V2} e ${V3}`
     else if ((V1 >= V2) && (V1 >= V3) && (V3 >= V2)) fator = `${V1}, ${V3} e ${V2}`
     else if ((V2 >= V1) && (V2 >= V3) && (V1 >= V3)) fator = `${V2}, ${V1} e ${V3}`
     else if ((V2 >= V1) && (V2 >= V3) && (V3 >= V1)) fator = `${V2}, ${V3} e ${V1}`
     else if ((V3 >= V1) && (V3 >= V2) && (V2 >= V1)) fator = `${V3}, ${V2} e ${V1}`
     else if ((V3 >= V1) && (V3 >= V2) && (V1 >= V2)) fator = `${V3}, ${V1} e ${V2}`
     else fator = `${V1} , ${V3} e ${V2}`
-    
+
     //SAÍDA
 
     document.write(`Na ordem decrescente, ${fator}`)
-
-
 </script>

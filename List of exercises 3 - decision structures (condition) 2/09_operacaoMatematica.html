@@ -1,29 +1,42 @@
+<meta charset = "UTF-8">
 <script>
     /*
     //PROBLEMA
-    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resu da operação deve ser acompanhado de uma frase que diga se o número é:
     - par ou ímpar;
     - positivo ou negativo;
     - inteiro ou decimal.
     */
-
+    
     //ENTRADA
 
-    const N1 = Number(prompt(`Digite um número`))
-    const N2 = Number(prompt(`Digite outro número`))
-    const operacao = prompt(`Digite qual operação deseja realizar sobre os números, considerando a ordem em que digitou. ("+" para soma, "-" para subtração, "/" para divisão, "*" para mutiplicação.)`)
-
+    const V1 = Number(prompt("digite o primeiro número"))
+    const V2 = Number(prompt("digite o segundo número"))
+    const opera = prompt("digite a operação a ser realizada. (`+` - soma, `-` - subtração, `/` - divisão, `*` - multiplicação )")
     //PROCESSAMENTO
-
-    if (operacao === `+`)N1 = N1 + N2
-    if else (operacao === )
+    let resu = ""
     
-
-
-
-
-
+    if (opera === "+") resu = V2 + V2
+    else if (opera === "-") resu = V2 - V2
+    else if (opera === "*") resu = V2 * V2
+    else if (opera === "/") resu = V2 / V2
+    else resu = "operação inválida"
+    
+    let parImpar = ""
+    let decimalInteiro = ""
+    let positivoNegativo = ""
+    
+    if (resu % 2 === 0) parImpar = `Par`
+    else parImpar = `Ímpar`
+    
+    if (resu < 0) positivoNegativo = `negativo`
+    else positivoNegativo = `positivo`
+    
+    if ((resu) - (Math.floor(resu)) === 0) decimalInteiro = `inteiro`
+    else decimalInteiro = `decimal`
+    
     //SAÍDA
 
-
+    document.write (`${V1} ${opera} ${V2} = ${resu}. O número é ${parImpar}, ${decimalInteiro}, ${positivoNegativo}`)
+    
 </script>
